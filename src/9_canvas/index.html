@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        canvas {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="item1">
+    </canvas>
+    <canvas id="item2">
+    </canvas>
+    <canvas id="item3">
+    </canvas>
+
+    <script>
+        var item1 = document.getElementById("item1");
+        var item1Context = item1.getContext("2d");
+        //开始⼀条路径
+        item1Context.beginPath();
+        //将画笔移动到指定起始坐标点上
+        item1Context.moveTo(100, 100);
+        //添加⼀个点，创建从上⼀个点到该点的线条
+        item1Context.lineTo(300, 100);
+        item1Context.lineTo(100, 200);
+        //创建起始坐标点到最终坐标点的路径
+        item1Context.closePath();
+        //执⾏绘制
+        item1Context.stroke();
+
+
+        var item2 = document.getElementById('item2');
+        var item2Context = item2.getContext("2d");
+        item2Context.beginPath();
+        item2Context.rect(100, 100, 200, 200);
+        item2Context.fillStyle = "red";
+        item2Context.fill();
+        item2Context.stroke();
+
+        var item3 = document.getElementById('item3');
+        var item3Context = item3.getContext("2d");
+        //开始⼀条路径
+        item3Context.beginPath();
+        //创建圆形
+        item3Context.arc(100, 100, 50, 0, 2 * Math.PI);
+        //执⾏绘制
+        item3Context.stroke();
+    </script>
+</body>
+
+</html>

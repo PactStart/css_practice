@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+body,
+button,
+input {
+  font: 12px arial;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}

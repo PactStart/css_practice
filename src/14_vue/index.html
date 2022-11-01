@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js"></script>
+
+    <style>
+        .bg {
+            background: red;
+        }
+        .small {
+            width: 50px;
+            height: 50px;
+        }
+        .middle {
+            width: 100px;
+            height: 100px;
+        }
+        .max {
+            width: 150px;
+            height: 150px;
+        }
+        .circle {
+            border-radius: 50%;
+        }
+        .border {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <h3>单项数据绑定</h3>
+            company: <input type="text" v-bind:value="company" /><br>
+
+        </div>
+        <div>
+            <h3>阻止默认行为 和 阻止事件冒泡</h3>
+            <a href="https://baidu.com" @click="onClick">https://baidu.com</a><br>
+            <a href="https://baidu.com" @click.prevent="onClick">https://baidu.com（.prevent阻止默认行为）</a><br>
+            <div @click="onClick"><a href="https://baidu.com"
+                    @click.prevent.stop="onClick">https://baidu.com（.stop阻止事件冒泡）</a><br></div>
+        </div>
+        <div>
+            <h3>双向数据绑定</h3>
+            firstName： <input type="text" v-model="firstName" /><br>
+            lastName： <input type="text" v-model="lastName" /><br>
+        </div>
+        <div>
+            <h3>计算属性</h3>
+            计算属性fullName: <input type="text" v-model="fullName" />修改不会引起firstName和lastName变化<br>
+            计算属性fullName2: <input type="text" v-model="fullName2" />修改会引起firstName和lastName变化<br>
+            方法fullName3: <input type="text" v-model="fullName3()" readonly />不缓存数据<br>
+        </div>
+        <div>
+            <h3>监视属性</h3>
+            监视属性fullName4: <input type="text" v-model="fullName3()" /><br>
+
+            数学成绩 <input type="text" v-model="score.math" /><br>
+            英语成绩 <input type="text" v-model="score.english" /><br>
+            （深度监视）总成绩 <input type="text" v-model="totalScore" /><br>
+        </div>
+        <div>
+            <h3>class样式动态绑定</h3>
+            <!-- <div class="small circle border bg"></div> -->
+
+            <div>
+                字符串写法：样式的类型不确定
+            </div>
+            <div :class="class0"></div>
+
+            <div>
+                对象写法:样式个数、类名确定，通过Boolean动态展示与否
+            </div>
+            <div :class="class1"></div>
+
+            <div>
+                数组写法:需要绑定的样式个数不确定，类名也不确定
+            </div>
+            <div :class="class2"></div>
+        </div>
+        <div>
+            <h3>style样式动态绑定</h3>
+            <div :style="style1"></div>
+        </div>
+    </div>
+
+    <script>
+        // Vue.config.productionTip = false;
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                company: 'tuoluo',
+                firstName: 'Rex',
+                lastName: 'Lei',
+                fullName4: '',
+                score: {
+                    math: 150,
+                    english: 150
+                },
+                totalScore: 300,
+                class0: 'small circle border bg',
+                class1: {
+                    small: true,
+                    circle:true,
+                    border: true,
+                    bg:true
+                },
+                class2: ['small','circle','border','bg'],
+                style1: {
+                    width:'50px',
+                    height: '50px',
+                    border: '1px sold black',
+                    borderRadius: '50%',
+                    background: 'red'
+                }
+            },
+            computed: {
+                fullName: function () {
+                    return this.firstName + '.' + this.lastName;
+                },
+                fullName2: {
+                    set(value) {
+                        this.firstName = value.split('.')[0];
+                        this.lastName = value.split('.')[1];
+                    },
+                    get() {
+                        return this.firstName + '.' + this.lastName;
+                    }
+                }
+            },
+            watch: {
+                firstName(val) {
+                    console.log('firstName changed')
+                    this.fullName4 = val + '.' + this.lastName;
+                },
+                lastName: {
+                    immediate: true,
+                    handler() {
+                        console.log('lastName changed')
+                        this.fullName4 = this.firstName + '.' + this.lastName;
+                    }
+                },
+                // 'score.math': {
+                //     handler() {
+                //         console.log('score.math changed');
+                //         this.totalScore = parseInt(this.score.english) + parseInt(this.score.math);
+                //     }
+                // },
+                // 'score.english': {
+                //     handler() {
+                //         console.log('score.english changed');
+                //         this.totalScore = parseInt(this.score.english) + parseInt(this.score.math);
+                //     }
+                // },
+                score: {
+                    deep: true,
+                    handler() {
+                        console.log('score changed');
+                        this.totalScore = parseInt(this.score.english) + parseInt(this.score.math);
+                    }
+                }
+                
+            },
+            methods: {
+                onClick() {
+                    alert('clicked')
+                },
+                fullName3() {
+                    console.log('fullName3 called')
+                    return this.firstName + '.' + this.lastName;
+                }
+            }
+        });
+        console.log(vm);
+    </script>
+</body>
+
+</html>

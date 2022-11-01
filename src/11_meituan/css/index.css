@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f9f7f8;
+    padding: 45px 0 64px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 顶部导航栏目 */
+.navbar {
+    display: flex;
+    background-color: #fff;
+    height: 40px;
+    color: #000;
+}
+
+.navbar .navbar-left {
+    height: 40px;
+    line-height: 40px;
+}
+
+.navbar .nav-city {
+    font-size: 14px;
+    margin: 0 15px;
+}
+
+.icon-arrow-down {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+    margin: 0 0 4px 6px;
+}
+
+.navbar-search {
+    flex: 1;
+    background-color: #f3f3f3;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    margin: 5px 15px;
+    padding: 0 26px;
+}
+
+.navbar-search input {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    /* 取消外边框点击效果 */
+    outline: none;
+}
+
+header {
+    margin-bottom: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+/* banner导航 */
+.banner {
+    padding: 5px 10px;
+    background-color: #fff;
+}
+
+.banner img {
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.navlist {
+    background-color: #fff;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+.navlist ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navlist .nav-item {
+    width: 20%;
+    flex: 0 0 20%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav-item .nav-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto 7px;
+    /* 居中 */
+    line-height: 40px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.nav-item .nav-des {
+    color: #333;
+}
+
+/* 附近拼团 */
+.boxWrapper {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.boxWrapper .title {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.box-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-item {
+    flex: 0 0 auto;
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+
+.box-item img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.box-item .item-title {
+    font-size: 14px;
+    /* padding: 0 15px; */
+}
+
+.box-item .price .current-price {
+    font-size: 18px;
+    color: #f63;
+}
+
+.box-item .price .original-price {
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #666;
+}
+
+/* 猜你喜欢 */
+.guessLike {
+    background-color: #fff;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.guessLike .title {
+    text-align: center;
+    color: #666;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd8ce;
+}
+
+.guessLike .item-href {
+    display: block;
+    padding: 15px 0;
+}
+
+.guessLike .guess-item {
+    border-bottom: 1px solid #ddd8ce;
+}
+
+.guessLike .guess-item:last-child {
+    border-bottom: none
+}
+
+.guessLike .item-box {
+    display: flex;
+}
+
+.guessLike .item-box .item-img {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+}
+
+.guessLike .item-box .item-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.guessLike .item-box .item-des {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.guessLike .item-box .item-des .item-name {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.guessLike .item-box .item-des .item-title {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.guessLike .item-box .item-des .price {
+    font-size: 14px;
+    color: #666;
+    position: relative;
+}
+
+.guessLike .item-box .item-des .price .current-price {
+    font-size: 22px;
+    color: red;
+}
+
+.guessLike .item-box .item-des .price .current-price::before {
+    content: '\A5';
+    font-size: 14px;
+    color: red;
+    margin-right: 3px;
+}
+
+.guessLike .item-box .item-des .price .sell-num {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+}
+
+/* 底部导航栏 */
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+}
+.nav-menu {
+    display: flex;
+}
+
+.nav-item {
+    flex: 1;
+    width: 33%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.nav-item a{
+    display: block;
+    color: #333;
+}
+
+.nav-item a.active{
+    color: #f63;
+}
+
+.nav-item a i {
+    display: block;
+    font-size: 24px;
+}
+
+.nav-item a span {
+    font-size: 14px;
+}

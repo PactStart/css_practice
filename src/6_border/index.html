@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角 & 盒阴影 & 渐变 & 文本效果【阴影、溢出、换行</title>
+
+    <style>
+        .item1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+        .item2 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 3px solid black;
+            border-radius: 10px 20px 30px 40px;
+        }
+        .item3 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 3px solid black;
+            border-radius: 50%;
+        }
+        .item4 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            box-shadow: 10px 10px 10px #000;
+        }
+        .item5 {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(red,yellow);
+        }
+        .item6 {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(to right,red,yellow);
+        }
+        .item7 {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(to bottom right ,red,yellow);
+        }
+        .item8 {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(0 ,red,yellow);
+        }
+        .item9 {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(45deg ,red,yellow);
+        }
+        .item10 {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(45deg ,red,yellow,green, black);
+        }
+        .item11 {
+            width: 100px;
+            height: 100px;
+            background-image: linear-gradient(rgba(255,0,0,0), rgba(255,0,0,1));
+        }
+        .item12 {
+            width: 100px;
+            height: 100px;
+            background-image: repeating-linear-gradient(red, yellow 10%);
+        }
+        .item13 {
+            width: 100px;
+            height: 100px;
+            background-image: repeating-linear-gradient(red, yellow 20%, green 20%);
+        }
+        .item14 {
+            border-top: 1px solid #000;
+            width: 500px;
+            text-shadow: 1px 1px 1px gray;
+            /* 超出部分隐藏 */
+            overflow: hidden;
+            /* 不换行 */
+            white-space: nowrap;
+            /* 溢出部分省略号替代 */
+            text-overflow: ellipsis; 
+        }
+        .item15 {
+            border-top: 1px solid #000;
+            width: 500px;
+            text-shadow: 1px 1px 1px gray;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        .item16 {
+            border-top: 1px solid #000;
+            width: 500px;
+            text-shadow: 1px 1px 1px gray;
+            /* 单词拆分换行 */
+            word-break: break-all;
+        }
+        .item17 {
+            border-top: 1px solid #000;
+            width: 500px;
+            text-shadow: 1px 1px 1px gray;
+            /* 长文本换行 */
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <p>1、border-radius</p>
+    <div class="item1">
+    </div>
+    <div class="item2">
+    </div>
+    <div class="item3">
+    </div>
+    <p>2、box-shadow</p>
+    <pre>
+        /*
+        第一个参数：阴影左右偏倚量
+        第二个参数：阴影上下偏倚量
+        第三个参数：阴影虚度
+        第四个参数：阴影颜色
+        */
+        box-shadow: 10px 10px 10px #000;
+    </pre>
+    <div class="item4"></div>
+    <p>3、line-gradient</p>
+    <pre>            
+        background-image: linear-gradient(red,yellow);
+    </pre>
+    <div class="item5"></div>
+    <pre>            
+        background-image: linear-gradient(to right,red,yellow);
+    </pre>
+    <div class="item6"></div>
+    <pre>            
+        background-image: linear-gradient(to bottom right ,red,yellow);
+    </pre>
+    <div class="item7"></div>
+    <pre>
+        background-image: linear-gradient(0deg ,red,yellow);
+    </pre>
+    <div class="item8"></div>
+    <pre>
+        background-image: linear-gradient(45deg ,red,yellow);
+    </pre>
+    <div class="item9"></div>
+    <pre>
+        background-image: linear-gradient(45deg ,red,yellow,green, black);
+    </pre>
+    <div class="item10"></div>
+    <pre>
+        background-image: linear-gradient(rgba(255,0,0,0), rgba(255,0,0,1));
+    </pre>
+    <div class="item11"></div>
+    <pre>
+        background-image: repeating-linear-gradient(red, yellow 10%);
+    </pre>
+    <div class="item12"></div>
+    <pre>
+        background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+    </pre>
+    <div class="item13"></div>
+    <p>4、文本阴影、溢出、换行</p>
+    <div class="item14">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ab commodi quia dolores rem laudantium sed ex, adipisci at laborum tenetur nesciunt excepturi consequatur? Eligendi quidem eaque minus commodi fuga!
+        Dolor fugit at nobis! Tempora autem libero repellat error? Fugit, sed, rem saepe voluptatum eum tempora consequatur veritatis voluptate esse consequuntur labore tenetur quod ipsa eveniet natus placeat totam minima.
+    </div>
+    <div class="item15">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt autem soluta totam reprehenderit! Voluptas, dolores explicabo asperiores qui suscipit autem modi ipsam. Minus sint fugit explicabo doloribus ratione, praesentium distinctio.
+        Fugit dolorem, dolore magnam nisi aliquam obcaecati nulla unde! Inventore labore, praesentium modi veritatis vel reprehenderit! Ex temporibus aliquid iusto aut dolore, fuga odit perferendis nihil, deserunt vitae obcaecati sapiente.
+    </div>
+    <div class="item16">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, eum? Odit debitis veniam numquam aliquam ducimus eveniet nemo perferendis ex? Laudantium unde error ipsum sunt optio at numquam rerum consectetur.
+        Culpa ex vero molestiae aut quod aliquid impedit saepe doloribus quibusdam obcaecati voluptates beatae nisi neque, molestias magni praesentium eveniet fuga provident sint labore dicta quaerat pariatur ad? Dolor, illo?
+    </div>
+    <div class="item17">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, eum? Odit debitis veniam numquam aliquam ducimus eveniet nemo perferendis ex? Laudantium unde error ipsum sunt optio at numquam rerum consectetur.
+        Culpa ex vero molestiae aut quod aliquid impedit saepe doloribus quibusdam obcaecati voluptates beatae nisi neque, molestias magni praesentium eveniet fuga provident sint labore dicta quaerat pariatur ad? Dolor, illo?
+    </div>
+</body>
+</html>

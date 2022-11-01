@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float浮动</title>
+    <style>
+        .item01 {
+            width: 50px;
+            height: 50px;
+            float: left;
+            background-color: pink;
+        }
+        .item02 {
+            width: 100px;
+            height: 100px;
+            background-color: chocolate;
+        }
+        .item1 {
+            width: 30%;
+            float: left;
+            height: 50px;
+        }
+        .item11 {
+            background-color: blue;
+        }
+        .item12 {
+            background-color:blanchedalmond;
+        }
+        .item13 {
+            background-color: green;
+        }
+        .item14 {
+            background-color: gray;
+        }
+
+        .item2 {
+            width: 30%;
+            height: 50px;
+        }
+        .item21 {
+            background-color: blue;
+        }
+        .item22 {
+            background-color:blanchedalmond;
+            float: left;
+        }
+        .item23 {
+            background-color: green;
+            float: left;
+        }
+        .item24 {
+            background-color: gray;
+            float: left;
+        }
+
+        .item3 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .item31 {
+            background-color: green;
+        }
+
+        .item32 {
+            background-color: yellow;
+            float: left;
+        }
+
+        .item51 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .item52 {
+            /* width: 200px;
+            height: 200px; */
+            background-color:blanchedalmond;
+        }
+        .item52::after {
+            clear: both;
+            content: '';
+            display: block;
+        }
+        .item53 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+        .item54 {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+        }
+
+        .item52 .left {
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            float: left;
+        }
+
+        .item52 .right {
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            float: right;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <a href="../index.html">返回首页</a>
+    <br>
+    <h1>浮动元素会脱离文档流，不再占据文档流空间</h1>
+    <div class="item0 item01"></div>
+    <div class="item0 item02"></div>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci fuga, tempora beatae odio doloremque officiis optio voluptates laboriosam cum reiciendis, hic est. Earum labore, minima eos id voluptates placeat rem.
+    Id, quam. Fugiat numquam quibusdam voluptatum similique quia. Tenetur sunt, animi unde provident eveniet laboriosam error aliquam consequuntur, voluptate at tempore itaque minus nisi optio sapiente veniam blanditiis aspernatur excepturi?
+    Unde incidunt, quas officia itaque optio ducimus. Illo obcaecati dolore id distinctio blanditiis, ut magnam natus harum doloremque libero voluptatum aliquam cumque maiores fugiat perferendis dolorum exercitationem odio unde? Deleniti.
+    Ratione fugit autem laboriosam temporibus ipsum ad aspernatur obcaecati, eligendi culpa, repellat non maxime, soluta molestias et voluptate eius aliquid consequuntur. Consectetur necessitatibus aut adipisci ipsa esse. Possimus, ea deserunt?
+    A itaque dignissimos dolores, quibusdam adipisci aspernatur neque nam quidem sapiente vel obcaecati similique iure voluptate at labore! Fugiat, dolorum qui ut fugit quisquam minima consectetur quo dicta molestiae animi?
+    <br>
+    <h1>浮动元素彼此之间是从左往右排列，宽度超过一行自动换行</h1>
+    <div>
+        <div class="item1 item11">item1</div>
+        <div class="item1 item12">item2</div>
+        <div class="item1 item13">item3</div>
+        <div class="item1 item14">item4</div>
+    </div>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veritatis, aperiam magni ut quasi illo repellat at similique. Consequuntur totam laudantium fuga quae et, ut voluptas repudiandae voluptatem iusto dolorem?
+    Illo alias velit, magni a dolore cupiditate, eius excepturi fugit facere tenetur, voluptate inventore voluptas dolorum officia repellat unde perferendis quibusdam adipisci fugiat. Qui debitis consequuntur fugit, ducimus necessitatibus magnam.
+    Inventore provident praesentium, ab sapiente assumenda officia omnis aspernatur obcaecati vero, et at voluptas placeat neque quaerat possimus id aliquid vel quod cupiditate debitis illum asperiores doloribus beatae? Commodi, et!
+    Minima, voluptatibus eaque esse accusamus, neque a explicabo accusantium in sunt omnis repellendus dolorum labore eligendi quidem voluptatem saepe beatae tenetur animi voluptas aperiam eius at rem minus incidunt. Labore?
+    Mollitia incidunt eaque quas omnis veritatis assumenda aperiam quisquam delectus recusandae cumque, eos necessitatibus quasi doloribus adipisci maiores quo ipsam repellendus quam aspernatur reprehenderit asperiores. Id accusamus soluta repudiandae nulla.
+    <br><h1>在浮动元素前面元素不浮动时，浮动元素无法上移</h1>
+    <div>
+        <div class="item2 item21">item1</div>
+        <div class="item2 item22">item2</div>
+        <div class="item2 item23">item3</div>
+        <div class="item2 item24">item4</div>
+    </div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo odio quaerat explicabo numquam accusamus fuga itaque aliquid quasi maxime, nisi eos? Animi eos consectetur error ipsum incidunt dolorem. Dolor, soluta.
+    Dolores iusto adipisci distinctio aut excepturi rerum soluta animi in molestiae vero suscipit temporibus sequi, vel hic aliquam commodi quo et. Delectus cumque modi eum praesentium odit voluptas provident quas.
+    Ipsum amet adipisci nemo tenetur cumque fuga exercitationem eaque repellat dicta. Exercitationem sunt sed dolorum illum adipisci unde commodi eveniet optio, sequi nam esse vel neque. Molestiae vitae quia facilis.
+    Quidem odit repellendus ut id architecto tempora, saepe aspernatur ipsum doloribus eligendi blanditiis, expedita tempore, laudantium aperiam excepturi fugit quasi eaque quo delectus aut natus reprehenderit necessitatibus libero amet. Doloremque?
+    Enim perspiciatis, hic debitis ad aliquid laboriosam voluptatibus recusandae non cumque voluptatum eveniet esse quas vel dolor amet reiciendis quod deleniti odit, vero, veritatis repudiandae ducimus? Assumenda necessitatibus quidem eveniet.
+    <h1>块级元素和行内元素浮动之后都变成行内块级元素(可以设置宽高，但不换行)</h1>
+    <span class="item3 item31">hehehaha</span>
+    <br>
+    <span class="item3 item32">hehehaha</span>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1>浮动元素不会盖住文字，可以设置文字环绕效果    </h1>
+    <div class="item4">
+        <img src="https://www.nftool.cn/_nuxt/img/logo_footer.6247b84.png" alt="" style="float:left;background:black">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas doloribus natus illum tenetur repudiandae facere nisi fuga? Nulla ullam ipsa praesentium sapiente cumque, id fugit adipisci dolorem voluptates fuga.
+        Corrupti, quae vitae inventore beatae distinctio esse ut, consectetur minus voluptas modi temporibus minima nobis, maiores harum officiis voluptates unde libero cum iste nulla. Blanditiis architecto itaque adipisci ad animi!
+        Quia, quod ipsum non dolores corrupti fugiat. Hic laborum ducimus voluptatum quaerat quidem at sequi aut in, ipsa debitis assumenda nulla dolorem sint repellendus tempore unde, necessitatibus cupiditate labore ea?
+        Quod earum voluptates numquam. Asperiores atque excepturi velit a aliquid autem consectetur impedit ratione est ex natus ipsam dicta voluptate placeat fuga, enim dolore, eligendi iure culpa! Fuga, reiciendis ad.
+        Eum nemo vitae, expedita pariatur quod quis error ea explicabo quidem corrupti corporis neque nulla voluptas assumenda tenetur, aspernatur cumque, ad veritatis numquam nobis incidunt ullam? Sapiente reprehenderit architecto laborum.
+        Iste molestias dicta enim aut at explicabo nostrum provident officia eos voluptate sit non doloremque in sequi fuga, qui dolores exercitationem. Quam, amet! Illum repudiandae ab quaerat aperiam, nemo quos.
+    </div>
+
+    <h1>清除浮动</h1>
+    <div>
+        <div class="item5 item51"></div>
+        <div class="item5 item52">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <div class="item5 item53"></div>
+        <div class="item5 item54"></div>
+    </div>
+</body>
+</html>

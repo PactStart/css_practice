@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex布局</title>
+    <style>
+        .item0 {
+            width: 250px;
+            height: 500px;
+            background-color: pink;
+            display: flex;
+            /* flex-direction:row; */
+            /* flex-wrap: wrap; */
+            /* justify-content: space-evenly; */
+            /* align-items: stretch; */
+            /* align-content: flex-start; */
+        }
+        .item {
+            width: 100px;
+            height: 50px;
+        }
+        .item01 {
+            background-color: green;
+            /* line-height: 50px; */
+        }
+        .item02 {
+            background-color:cadetblue;
+            /* line-height: 100px; */
+
+        }
+        .item03 {
+            background-color: yellow;
+            /* line-height: 150px; */
+            flex-grow: 1;
+
+        }
+        .item04 {
+            background-color: blue;
+            /* line-height: 200px; */
+            order: -1;
+            flex-grow: 1;
+            flex-shrink: 0;
+
+        }
+        .item05 {
+            background-color:chocolate;
+        }
+        .item06 {
+            background-color:darkgoldenrod;
+        }
+        .item07 {
+            background-color:mediumseagreen;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html">返回首页</a>
+    <br>
+    <div class="item0">
+        <div class="item item01">1</div>
+        <div class="item item02">2</div>
+        <div class="item item03">3</div>
+        <div class="item item04">4</div>
+        <!-- <div class="item item05">5</div>
+        <div class="item item06">6</div>
+        <div class="item item07">7</div> -->
+
+    </div>
+</body>
+</html>

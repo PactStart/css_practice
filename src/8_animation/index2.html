@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .item1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            transition: width 2s ease 1s, height 2s, transform 2s;
+        }
+
+        .item1:hover {
+            width: 200px;
+            height: 200px;
+            transform: rotate(360deg);
+        }
+
+        .item2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            /* animation: myAnimation 5s; */
+            animation: myAnimation 5s ease 1s infinite alternate forwards running;
+        }
+        @keyframes myAnimation {
+            from {
+                width: 100px;
+                height: 100px;
+                background: red;
+            }
+
+            to {
+                width: 200px;
+                height: 200px;
+                margin-left: 500px;
+                /* background: yellow; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <pre>
+        transition: property duration timing-function delay;
+        animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+    </pre>
+    <div class="item1">
+
+    </div>
+
+    <div class="item2">
+
+    </div>
+</body>
+
+</html>
